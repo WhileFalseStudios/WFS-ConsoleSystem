@@ -41,6 +41,29 @@ static ConsoleCommandGeneric genericParameters; // Method that takes a string[] 
 
 More parameter command types could be easily implemented, but typing them out takes a while and they have never been needed.
 
+### Multicast Commands
+These function almost exactly like normal console commands, but allow more than 1 action to be bound to a command. Actions can also be unbound at will.
+
+```CSharp
+static ConsoleMulticastCommand noParams;
+static ConsoleMulticastCommand<int> oneParam;
+static ConsoleMulticastCommand<int, int> twoParams;
+static ConsoleMulticastCommand<int, int, int> threeParams;
+static ConsoleMulticastCommandGeneric genericParams;
+```
+
+Actions can be bound like so:
+```CSharp
+multiCommand.Add(MethodOfInstanceObject);
+```
+
+...and removed like so:
+```CSharp
+multiCommand.Remove(MethodOfInstanceObject);
+```
+
+This can be used to allow multiple game entities to respond to commands that are static members of their class.
+
 ### Console Variables
 There are three types of console variable:
 

@@ -45,6 +45,7 @@
     <Compile Include="Console Engine\ConsoleStatement.cs" />
     <Compile Include="Console Types\ConsoleBase.cs" />
     <Compile Include="Console Types\ConsoleCommand.cs" />
+    <Compile Include="Console Types\ConsoleCommandMulticast.cs" />
     <Compile Include="Console Types\ConsoleVariable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

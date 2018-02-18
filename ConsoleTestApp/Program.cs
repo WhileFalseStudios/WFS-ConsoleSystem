@@ -19,6 +19,11 @@ namespace ConsoleTestApp
         static ConsoleCommand<float, int> aBigCommand2 = new ConsoleCommand<float, int>("dev_bigcommandtest2", C_BigTest2, "Tests multi parameter commands.");
         static ConsoleCommandGeneric genericCommand = new ConsoleCommandGeneric("dev_genericcommand", C_Generic, "Tests generic command");
 
+        static ConsoleMulticastCommand multicastNoParam = new ConsoleMulticastCommand("dev_multicast_health", "Basic no-param multicast command.");
+        static ConsoleMulticastCommand<int> multicastOneParam = new ConsoleMulticastCommand<int>("dev_multicast_damage", "Single-parameter multicast command.");
+        static ConsoleCommand<string> bindMulticastObject = new ConsoleCommand<string>("dev_multicast_bind", C_BindMulticast, "Bind an object with the given name to the 'dev_multicast_invoke' command.");
+        static ConsoleCommand<string> unbindMulticastObject = new ConsoleCommand<string>("dev_multicast_unbind", C_UnbindMulticast, "Unbinds a bound object with the given name from the 'dev_multicast_invoke' command.");
+
         static ConsoleVariable<string> dev_stringVar = new ConsoleVariable<string>("dev_stringvar", "Test", "Test variable for strings.", ConsoleFlag.Archive);
         static ConsoleVariable<int> dev_intVar = new ConsoleVariable<int>("dev_intvar", 10, "Test variable for ints.", ConsoleFlag.Archive);
         static ConsoleVariable<float> dev_floatVar = new ConsoleVariable<float>("dev_floatvar", 10.0f, "Test variable for floats.", ConsoleFlag.Archive);
@@ -65,6 +70,29 @@ namespace ConsoleTestApp
             Console.ForegroundColor = c;
             Console.WriteLine(text);
             Console.ForegroundColor = ConsoleColor.Gray;
+        }
+
+        static Dictionary<string, MulticastTestObject> multicastTests = new Dictionary<string, MulticastTestObject>();
+        static Random rand = new Random();
+
+        static void C_BindMulticast(string name)
+        {
+            if (!multicastTests.ContainsKey(name))
+            {
+                var test = new MulticastTestObject(name, rand.Next(10, 100));
+                test.Register();
+                multicastTests.Add(name, test);
+            }
+        }
+
+        static void C_UnbindMulticast(string name)
+        {
+            if (multicastTests.ContainsKey(name))
+            {
+                var test = multicastTests[name];
+                test.Unregister();
+                multicastTests.Remove(name);
+            }
         }
 
         static void C_Quit()
