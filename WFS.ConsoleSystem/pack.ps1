@@ -1,0 +1,1 @@
+nuget pack WhileFalseStudios.Console.csproj -symbols

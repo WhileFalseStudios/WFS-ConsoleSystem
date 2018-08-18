@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+    <id>WhileFalseStudios.Console</id>
+    <authors>While False Studios</authors>
+    <owners>WhileFalseStudios</owners>
+    <projectUrl>https://github.com/WhileFalseStudios/WFS-ConsoleSystem</projectUrl>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <version>1.0.0</version>
+    <summary>A developer console library for .NET 3.5+ </summary>
+    <description>A developer console library implementing most of the features of Source Engine/Id-style commands and variables. It is designed to be compatible with Unity but is not dependent on it. See project page for usage.</description>
+    <copyright>Copyright © 2018 While False Studios</copyright>
+    <tags>console command developer unity</tags>
+    <packageTypes>
+      <packageType name="Dependency"/>
+    </packageTypes>
+	</metadata>
+  <files>
+    <file src="..\README.md" target=""/>
+  </files>
+</package>

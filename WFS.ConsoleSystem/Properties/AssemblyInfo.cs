@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("WFS.ConsoleSystem")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("WhileFalseStudios.Console")]
+[assembly: AssemblyDescription("Console command and variable library for .NET")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("While False Studios")]
-[assembly: AssemblyProduct("WFS.ConsoleSystem")]
-[assembly: AssemblyCopyright("Copyright © While False Studios 2017")]
+[assembly: AssemblyProduct("WhileFalseStudios.Console")]
+[assembly: AssemblyCopyright("Copyright © While False Studios 2017-2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,4 +33,4 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
  [assembly: AssemblyVersion("1.0.*")]
 //[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+//[assembly: AssemblyFileVersion("1.0.0.0")]

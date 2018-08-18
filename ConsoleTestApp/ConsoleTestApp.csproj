@@ -45,9 +45,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WFS.ConsoleSystem\WFS.ConsoleSystem.csproj">
+    <ProjectReference Include="..\WFS.ConsoleSystem\WhileFalseStudios.Console.csproj">
       <Project>{241dd554-ad85-45f8-b431-d7dfb53ae6e0}</Project>
-      <Name>WFS.ConsoleSystem</Name>
+      <Name>WhileFalseStudios.Console</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

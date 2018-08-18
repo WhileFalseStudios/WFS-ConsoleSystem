@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFS.ConsoleSystem", "WFS.ConsoleSystem\WFS.ConsoleSystem.csproj", "{241DD554-AD85-45F8-B431-D7DFB53AE6E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileFalseStudios.Console", "WFS.ConsoleSystem\WhileFalseStudios.Console.csproj", "{241DD554-AD85-45F8-B431-D7DFB53AE6E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTestApp", "ConsoleTestApp\ConsoleTestApp.csproj", "{F4CDD978-11B8-4464-9AAE-1E59ED052CE0}"
 EndProject
@@ -24,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E276330-AFDB-4B1B-A1EA-3FEED9B5F86E}
 	EndGlobalSection
 EndGlobal
